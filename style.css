@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #00bfa5 0%,
+        #00bfa5 15%,
+        #d4dbd9 15%,
+        #d4dbd9 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 95%;
+    min-width: 900px;
+    background: white;
+}
+
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* sidebar left */
+.side-left{
+    float: left;
+    width: 35%;
+    height: 100%;
+    background: rgb(247, 246, 246);
+}
+
+/* header left */
+.left{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 5px;
+    background: lightgrey;
+}
+
+.left img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.info-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.name{
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.settings{
+    display: flex;
+}
+
+.settings i{
+    font-size: 15px;
+    margin-right: 15px;
+    color: rgb(150, 149, 149);
+}
+/* notification left */
+.notification{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    background: rgb(155, 217, 255);
+}
+
+.bell i{
+    font-size: 25px;
+    color: white;
+}
+
+.not-text{
+    margin-left: 10px;
+}
+
+.not-text a{
+    font-size: 12px;
+}
+
+/* input bar */
+.search-start{
+    padding: 5px;
+}
+
+.search-start i{
+    position: absolute;
+}
+
+.icon{
+    padding: 5px 20px;
+    color: rgb(224, 224, 224);
+}
+
+.search-start input{
+    width: 100%;
+    height: 25px;
+    padding-left: 50px;
+    border: none;
+    color: rgb(224, 224, 224);
+}
+
+/* contacts chat */
+.contacts-chat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.contacts-chat img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.name-contact{
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+/* sidebar right */
+.side-right{
+    float: right;
+    width: 65%;
+    height: 100%;
+    margin: 0;
+    background: rgb(161, 160, 160);
+}
+

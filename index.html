@@ -40,7 +40,7 @@
                 </div>
                 <div id="app">
                     <div class="contacts-chat" v-for = "contact in contacts">
-                        <img src="`./img/avatar${contact.avatar}.jpg`" alt="">
+                        <img :src="`./img/avatar${contact.avatar}.jpg`" alt="">
                         <div class="name-contact">{{ contact.name }}</div>
                     </div>
                 </div>
