@@ -50,7 +50,11 @@
                 <header class="right">
                     <img :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
                     <div class="info-user">
-                        <div class="name">{{ contacts[activeContact].name }}</div>
+                        <div class="info-chat">
+                            <div class="name">{{ contacts[activeContact].name }}</div>
+                            <div class="last-access" v-model="dateNow">ultimo accesso il {{ dateNow }}
+                            </div>
+                        </div>
                         <div class="settings">
                             <div class="search-icon"><i class="fas fa-search"></i></div>
                             <div class="clip-icon"><i class="fas fa-paperclip"></i></div>
@@ -85,7 +89,7 @@
 
         </div>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

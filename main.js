@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        dateNow: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         user: {
             name: 'Dario Di Cuia',
             avatar: '_io'
@@ -93,28 +94,29 @@ const app = new Vue({
         messageUser: '',
     },
     methods: {
+
+        //selezionare chat 
         getActiveContact(index){
             this.activeContact = index;
             console.log(this.activeContact);
         },
-
+        //creare messaggio 
         getMessageUser(){
             this.contacts[this.activeContact].messages.push({
-                date: '17/11/2021',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.messageUser,
                 status: 'sent'
             })
             this.messageUser = '';
-
+            //ricevere messaggio dopo 1 secondo
             setTimeout(()=>{
                 this.contacts[this.activeContact].messages.push({
-                    date: '17/11/2021',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: 'Ciao',
                     status: 'received'
                 })
             }, 1000)
-        },
 
-    
+        },
     }
 });
