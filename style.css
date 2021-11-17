@@ -174,18 +174,11 @@ body{
 }
 
 .chat{
-    margin-top: 40px;
-}
-
-.row1{
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 0 50px;
     
-}
-
-.row1,
-.row2{
-    padding-bottom: 10px;
 }
 
 .msg-date{
@@ -196,20 +189,23 @@ body{
     justify-content: end;
 }
 
-.msg-sent{
+.msg.sent,
+.msg.received{
     width: 250px;
     padding: 15px 5px 5px 10px;
-    background: #dcf8c6;
-    margin-right: 50px;
     border-radius: 8px;
+    margin-bottom: 10px;
+
 }
 
-.msg-received{
-    width: 250px;
-    padding: 10px 5px 5px 10px;
+.msg.sent{
+    align-self: flex-end;
+    background: #dcf8c6;
+}
+
+.msg.received{
+    align-self: flex-start;
     background: white;
-    margin-left: 50px;
-    border-radius: 8px;
 }
 
 /* footer right */

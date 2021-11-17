@@ -60,18 +60,17 @@
                 </header>
 
                 <main class="chat">
-                    <div class="row1">
-                        <div class="msg-sent">
-                            <div class="text">Messaggio inviato</div>
-                            <div class="msg-date">10/01/2021 15:50:00</div>
-                        </div>
+                    <div class="msg" v-for="(message, index) in contacts[activeContact].messages" :class="message.status">
+                        <div class="text">{{ message.text }}</div>
+                        <div class="msg-date">10/01/2021 15:50:00</div>
                     </div>
-                    <div class="row2">
-                        <div class="msg-received">
-                            <div class="text">Messaggio ricevuto</div>
-                            <div class="msg-date">10/01/2021 15:50:00</div>
-                        </div>
-                    </div>
+                
+                    
+                    <!-- <div class="msg-received">
+                        <div class="text">Messaggio ricevuto</div>
+                        <div class="msg-date">10/01/2021 15:50:00</div>
+                    </div> -->
+                    
                 </main>
 
                 <footer class="message-bar">
