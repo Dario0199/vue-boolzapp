@@ -88,7 +88,13 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
-        
+        ],
+        activeContact: 0,
+    },
+    methods: {
+        getActiveContact(index){
+            this.activeContact = index;
+            console.log(this.activeContact);
+        }
     }
 });
