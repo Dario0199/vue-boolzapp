@@ -62,7 +62,7 @@
                 <main class="chat">
                     <div class="msg" v-for="(message, index) in contacts[activeContact].messages" :class="message.status">
                         <div class="text">{{ message.text }}</div>
-                        <div class="msg-date">10/01/2021 15:50:00</div>
+                        <div class="msg-date">{{ message.date }}</div>
                     </div>
                 
                     
@@ -76,7 +76,8 @@
                 <footer class="message-bar">
                     <div class="footer-container">
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" @keyup.enter="getMessageUser"
+                        v-model="messageUser">
                         <i class="fas fa-microphone"></i>
                     </div>
                 </footer>

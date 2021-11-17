@@ -90,11 +90,31 @@ const app = new Vue({
             },
         ],
         activeContact: 0,
+        messageUser: '',
     },
     methods: {
         getActiveContact(index){
             this.activeContact = index;
             console.log(this.activeContact);
-        }
+        },
+
+        getMessageUser(){
+            this.contacts[this.activeContact].messages.push({
+                date: '17/11/2021',
+                text: this.messageUser,
+                status: 'sent'
+            })
+            this.messageUser = '';
+
+            setTimeout(()=>{
+                this.contacts[this.activeContact].messages.push({
+                    date: '17/11/2021',
+                    text: 'Ciao',
+                    status: 'received'
+                })
+            }, 1000)
+        },
+
+    
     }
 });
