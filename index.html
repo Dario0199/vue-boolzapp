@@ -12,12 +12,12 @@
 </head>
 <body>
     
-        <div class="container clearfix">
+        <div id="app" class="container clearfix">
             <aside class="side-left">
-                <header class="left">
-                    <img src="./img/avatar_io.jpg" alt="">
+                <header class="left" v-model="user">
+                    <img :src="`./img/avatar${user.avatar}.jpg`" alt="">
                     <div class="info-user">
-                        <div class="name">Dario Di Cuia</div>
+                        <div class="name">{{ user.name }}</div>
                         <div class="settings">
                             <div class="circle-icon"><i class="fas fa-circle-notch"></i></div>
                             <div class="chat-icon"><i class="fas fa-comment-alt"></i></div>
@@ -38,12 +38,12 @@
                     <i class="fas fa-search icon"></i>
                     <input type="text" placeholder="search">
                 </div>
-                <div id="app">
-                    <div class="contacts-chat" v-for = "contact in contacts">
-                        <img :src="`./img/avatar${contact.avatar}.jpg`" alt="">
-                        <div class="name-contact">{{ contact.name }}</div>
-                    </div>
+                
+                <div class="contacts-chat" v-for = "contact in contacts">
+                    <img :src="`./img/avatar${contact.avatar}.jpg`" alt="">
+                    <div class="name-contact">{{ contact.name }}</div>
                 </div>
+                
             </aside>
 
             <aside class="side-right">
